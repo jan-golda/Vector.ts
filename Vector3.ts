@@ -2,9 +2,7 @@
 
 class Vector3{
 
-    private x: number;
-    private y: number;
-    private z: number;
+    private c: Array<number> = [0,0,0];
 
     public constructor(x: number = 0, y: number = 0, z:number = 0){
         this.x = x;
@@ -16,6 +14,30 @@ class Vector3{
      GETTERS / SETTERS
      */
 
+    public get x(): number {
+        return this.c[0];
+    }
+
+    public get y(): number{
+        return this.c[1];
+    }
+
+    public get z(): number{
+        return this.c[2];
+    }
+
+    public set x(x: number){
+        this.c[0] = x;
+    }
+
+    public set y(y: number){
+        this.c[1] = y;
+    }
+
+    public set z(z: number){
+        this.c[2] = z;
+    }
+
     public getX(): number {
         return this.x;
     }
@@ -26,6 +48,14 @@ class Vector3{
 
     public getZ(): number{
         return this.z;
+    }
+
+    public get(i: number): number{
+        return this.c[i];
+    }
+
+    public getCoordinates(): Array<number>{
+        return this.c;
     }
 
     public setX(x: number): Vector3 {
@@ -163,7 +193,7 @@ class Vector3{
      */
 
     public static dot(v1: Vector3, v2: Vector3): number {
-        return (v1.getX()*v2.getX() + v1.getY()*v2.getY() + v1.getZ()*v2.getZ());
+        return (v1.x*v2.x + v1.y*v2.y + v1.z*v2.z);
     }
 
     public static cross(v1: Vector3, v2: Vector3): Vector3{

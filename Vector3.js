@@ -3,13 +3,44 @@ var Vector3 = (function () {
         if (x === void 0) { x = 0; }
         if (y === void 0) { y = 0; }
         if (z === void 0) { z = 0; }
+        this.c = [0, 0, 0];
         this.x = x;
         this.y = y;
         this.z = z;
     }
-    /*
-     GETTERS / SETTERS
-     */
+    Object.defineProperty(Vector3.prototype, "x", {
+        /*
+         GETTERS / SETTERS
+         */
+        get: function () {
+            return this.c[0];
+        },
+        set: function (x) {
+            this.c[0] = x;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Vector3.prototype, "y", {
+        get: function () {
+            return this.c[1];
+        },
+        set: function (y) {
+            this.c[1] = y;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Vector3.prototype, "z", {
+        get: function () {
+            return this.c[2];
+        },
+        set: function (z) {
+            this.c[2] = z;
+        },
+        enumerable: true,
+        configurable: true
+    });
     Vector3.prototype.getX = function () {
         return this.x;
     };
@@ -18,6 +49,12 @@ var Vector3 = (function () {
     };
     Vector3.prototype.getZ = function () {
         return this.z;
+    };
+    Vector3.prototype.get = function (i) {
+        return this.c[i];
+    };
+    Vector3.prototype.getCoordinates = function () {
+        return this.c;
     };
     Vector3.prototype.setX = function (x) {
         this.x = x;
@@ -126,7 +163,7 @@ var Vector3 = (function () {
      STATIC FUNCTIONS
      */
     Vector3.dot = function (v1, v2) {
-        return (v1.getX() * v2.getX() + v1.getY() * v2.getY() + v1.getZ() * v2.getZ());
+        return (v1.x * v2.x + v1.y * v2.y + v1.z * v2.z);
     };
     Vector3.cross = function (v1, v2) {
         var x = v1.y * v2.z - v1.z * v2.y;

@@ -2,8 +2,7 @@
 
 class Vector2{
 
-    private x: number;
-    private y: number;
+    private c: Array<number> = [0,0];
 
     public constructor(x: number = 0, y: number = 0){
         this.x = x;
@@ -14,12 +13,36 @@ class Vector2{
         GETTERS / SETTERS
      */
 
+    public get x(): number {
+        return this.c[0];
+    }
+
+    public get y(): number{
+        return this.c[1];
+    }
+
+    public set x(x: number){
+        this.c[0] = x;
+    }
+
+    public set y(y: number){
+        this.c[1] = y;
+    }
+
     public getX(): number {
         return this.x;
     }
 
     public getY(): number{
         return this.y;
+    }
+
+    public get(i: number): number{
+        return this.c[i];
+    }
+
+    public getCoordinates(): Array<number>{
+        return this.c;
     }
 
     public setX(x: number): Vector2 {
@@ -142,7 +165,7 @@ class Vector2{
      */
 
     public static dot(v1: Vector2, v2: Vector2): number {
-        return (v1.getX()*v2.getX() + v1.getY()*v2.getY());
+        return (v1.x*v2.x + v1.y*v2.y);
     }
 
     public static cross(v1: Vector2, v2: Vector2): number{

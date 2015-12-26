@@ -2,17 +2,44 @@ var Vector2 = (function () {
     function Vector2(x, y) {
         if (x === void 0) { x = 0; }
         if (y === void 0) { y = 0; }
+        this.c = [0, 0];
         this.x = x;
         this.y = y;
     }
-    /*
-        GETTERS / SETTERS
-     */
+    Object.defineProperty(Vector2.prototype, "x", {
+        /*
+            GETTERS / SETTERS
+         */
+        get: function () {
+            return this.c[0];
+        },
+        set: function (x) {
+            this.c[0] = x;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Vector2.prototype, "y", {
+        get: function () {
+            return this.c[1];
+        },
+        set: function (y) {
+            this.c[1] = y;
+        },
+        enumerable: true,
+        configurable: true
+    });
     Vector2.prototype.getX = function () {
         return this.x;
     };
     Vector2.prototype.getY = function () {
         return this.y;
+    };
+    Vector2.prototype.get = function (i) {
+        return this.c[i];
+    };
+    Vector2.prototype.getCoordinates = function () {
+        return this.c;
     };
     Vector2.prototype.setX = function (x) {
         this.x = x;
@@ -107,7 +134,7 @@ var Vector2 = (function () {
         STATIC FUNCTIONS
      */
     Vector2.dot = function (v1, v2) {
-        return (v1.getX() * v2.getX() + v1.getY() * v2.getY());
+        return (v1.x * v2.x + v1.y * v2.y);
     };
     Vector2.cross = function (v1, v2) {
         return (v1.x * v2.y - v1.y * v2.x);
