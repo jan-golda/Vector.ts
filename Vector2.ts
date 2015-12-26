@@ -145,6 +145,10 @@ class Vector2{
         return (v1.getX()*v2.getX() + v1.getY()*v2.getY());
     }
 
+    public static cross(v1: Vector2, v2: Vector2): number{
+        return (v1.x*v2.y - v1.y*v2.x);
+    }
+
     public static distance(v1: Vector2, v2: Vector2): number{
         var x = v2.x - v1.x;
         var y = v2.y - v1.y;

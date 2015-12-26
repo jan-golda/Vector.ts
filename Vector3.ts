@@ -166,6 +166,13 @@ class Vector3{
         return (v1.getX()*v2.getX() + v1.getY()*v2.getY() + v1.getZ()*v2.getZ());
     }
 
+    public static cross(v1: Vector3, v2: Vector3): Vector3{
+        var x = v1.y*v2.z - v1.z*v2.y;
+        var y = v1.z*v2.x - v1.x*v2.z;
+        var z = v1.x*v2.y - v1.y*v2.x;
+        return new Vector3(x,y,z);
+    }
+
     public static distance(v1: Vector3, v2: Vector3): number{
         var x = v2.x - v1.x;
         var y = v2.y - v1.y;

@@ -109,6 +109,9 @@ var Vector2 = (function () {
     Vector2.dot = function (v1, v2) {
         return (v1.getX() * v2.getX() + v1.getY() * v2.getY());
     };
+    Vector2.cross = function (v1, v2) {
+        return (v1.x * v2.y - v1.y * v2.x);
+    };
     Vector2.distance = function (v1, v2) {
         var x = v2.x - v1.x;
         var y = v2.y - v1.y;
