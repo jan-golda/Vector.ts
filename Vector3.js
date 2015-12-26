@@ -140,6 +140,64 @@ var Vector3 = (function () {
         var z = v2.z - v1.z;
         return Math.sqrt(x * x + y * y + z * z);
     };
+    Object.defineProperty(Vector3, "ZERO", {
+        /*
+         STATIC VARIABLES
+         */
+        get: function () {
+            return new Vector3(0, 0);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Vector3, "ONE", {
+        get: function () {
+            return new Vector3(1, 1, 1);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Vector3, "RIGHT", {
+        get: function () {
+            return new Vector3(1, 0, 0);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Vector3, "LEFT", {
+        get: function () {
+            return new Vector3(-1, 0, 0);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Vector3, "UP", {
+        get: function () {
+            return new Vector3(0, 1, 0);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Vector3, "DOWN", {
+        get: function () {
+            return new Vector3(0, -1, 0);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Vector3, "FORWARD", {
+        get: function () {
+            return new Vector3(0, 0, 1);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Vector3, "BACK", {
+        get: function () {
+            return new Vector3(0, 0, -1);
+        },
+        enumerable: true,
+        configurable: true
+    });
     return Vector3;
 })();
-//# sourceMappingURL=Vector3.js.map

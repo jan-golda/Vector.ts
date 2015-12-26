@@ -117,6 +117,50 @@ var Vector2 = (function () {
         var y = v2.y - v1.y;
         return Math.sqrt(x * x + y * y);
     };
+    Object.defineProperty(Vector2, "ZERO", {
+        /*
+            STATIC VARIABLES
+         */
+        get: function () {
+            return new Vector2(0, 0);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Vector2, "ONE", {
+        get: function () {
+            return new Vector2(1, 1);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Vector2, "RIGHT", {
+        get: function () {
+            return new Vector2(1, 0);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Vector2, "LEFT", {
+        get: function () {
+            return new Vector2(-1, 0);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Vector2, "UP", {
+        get: function () {
+            return new Vector2(0, 1);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Vector2, "DOWN", {
+        get: function () {
+            return new Vector2(0, -1);
+        },
+        enumerable: true,
+        configurable: true
+    });
     return Vector2;
 })();
-//# sourceMappingURL=Vector2.js.map

@@ -179,4 +179,40 @@ class Vector3{
         var z = v2.z - v1.z;
         return Math.sqrt(x*x + y*y + z*z);
     }
+
+    /*
+     STATIC VARIABLES
+     */
+
+    public static get ZERO(){
+        return new Vector3(0,0);
+    }
+
+    public static get ONE(){
+        return new Vector3(1,1,1);
+    }
+
+    public static get RIGHT(){
+        return new Vector3(1,0,0);
+    }
+
+    public static get LEFT(){
+        return new Vector3(-1,0,0);
+    }
+
+    public static get UP(){
+        return new Vector3(0,1,0);
+    }
+
+    public static get DOWN(){
+        return new Vector3(0,-1,0);
+    }
+
+    public static get FORWARD(){
+        return new Vector3(0,0,1);
+    }
+
+    public static get BACK(){
+        return new Vector3(0,0,-1);
+    }
 }

@@ -154,4 +154,32 @@ class Vector2{
         var y = v2.y - v1.y;
         return Math.sqrt(x*x + y*y);
     }
+
+    /*
+        STATIC VARIABLES
+     */
+
+    public static get ZERO(){
+        return new Vector2(0,0);
+    }
+
+    public static get ONE(){
+        return new Vector2(1,1);
+    }
+
+    public static get RIGHT(){
+        return new Vector2(1,0);
+    }
+
+    public static get LEFT(){
+        return new Vector2(-1,0);
+    }
+
+    public static get UP(){
+        return new Vector2(0,1);
+    }
+
+    public static get DOWN(){
+        return new Vector2(0,-1);
+    }
 }
