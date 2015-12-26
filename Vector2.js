@@ -116,4 +116,4 @@ var Vector2 = (function () {
     };
     return Vector2;
 })();
-//# sourceMappingURL=Vector.js.map
+//# sourceMappingURL=Vector2.js.map
